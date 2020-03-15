@@ -61,7 +61,7 @@ def main(args):
     subsize  = args.length
 
     if args.lookup:
-        pat = args.lookup
+        pat = cyclic(args.lookup, 'UTF-8')
 
         try:
             pat = packing.pack(int(pat, 0), subsize*8)
