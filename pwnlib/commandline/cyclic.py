@@ -57,7 +57,7 @@ group.add_argument(
 )
 
 def main(args):
-    alphabet = args.alphabet
+    alphabet = bytes(args.alphabet, 'UTF-8')
     subsize  = args.length
 
     if args.lookup:
